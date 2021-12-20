@@ -1,0 +1,330 @@
+body {
+  background-color: black;
+}
+
+.w {
+  color: whitesmoke;
+  font-size: 25px;
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.blur {
+  filter: blur(25px);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.task-header h1 {
+  font-size: 50px;
+}
+
+.task-header h1 span {
+  font-weight: lighter;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  margin-top: 1 0px;
+}
+
+.box {
+  width: 240px;
+  min-height: 370px;
+  box-shadow: 0 0 3px rgb(231, 23, 23);
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.sbox {
+  width: 240px;
+  min-height: 370px;
+  box-shadow: 0 0 3px rgb(231, 23, 23);
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.selected {
+  margin-top: 50px;
+}
+
+#b-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading {
+  color: whitesmoke;
+  font-size: 30px;
+}
+
+.page-2-btn {
+  width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-heading {
+  text-align: center;
+  font-weight: lighter;
+  color: rgb(209, 37, 37);
+}
+
+.sbox .box-heading {
+  padding-top: 10px;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.task {
+  display: flex;
+  column-gap: 10px;
+}
+
+.task-done-btn {
+  background-color: rgba(102, 102, 219, 0.986);
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.task-done {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  color: red;
+}
+
+.d-none {
+  display: none;
+}
+
+.lists p {
+  text-align: center;
+  font-size: 22px;
+}
+
+#del_list {
+  position: absolute;
+  right: 60px;
+  bottom: 20px;
+}
+
+#add_list {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+}
+
+#s_del_list {
+  position: absolute;
+  right: 60px;
+  bottom: 20px;
+}
+
+#s_add_list {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+}
+
+#p-btn {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+}
+
+#add-task-text {
+  font-size: 30px;
+}
+
+.fa-plus-circle {
+  color: rgba(102, 102, 219, 0.986);
+  font-size: 34px;
+}
+
+.fa-trash {
+  background-color: rgb(184, 37, 37);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.white {
+  color: white;
+  background-color: #444;
+  padding: 10px;
+  text-align: center;
+}
+
+.fa-chevron-circle-left {
+  color: whitesmoke;
+}
+
+/* Modal Animation */
+.m-box {
+  animation-name: popup;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 190px;
+  width: 380px;
+  border-style: solid;
+  position: absolute;
+  border-color: rgb(241, 116, 116);
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  color: rgb(241, 116, 116);
+  z-index: 1000;
+}
+
+.m-box button {
+  text-transform: uppercase;
+  margin-top: 20px;
+  height: 40px;
+  width: 75px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: rgb(226, 73, 73);
+  color: white;
+}
+
+.modal-btns {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.m-box input {
+  width: 60%;
+  text-align: center;
+  display: block;
+  padding: 10px 30px;
+  border-color: rgb(241, 116, 116);
+  border-radius: 5px;
+  outline: none;
+}
+
+/* knjhbjjjjjjjjjjjjjjjjjj */
+
+.add-item-modal {
+  animation-name: popup;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 190px;
+  width: 380px;
+  border-style: solid;
+  position: absolute;
+  border-color: rgb(241, 116, 116);
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  color: rgb(241, 116, 116);
+  z-index: 1000;
+}
+
+.add-item-modal button {
+  text-transform: uppercase;
+  margin-top: 20px;
+  height: 40px;
+  width: 75px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: rgb(226, 73, 73);
+  color: white;
+}
+
+.btn {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-item-modal input {
+  width: 60%;
+  text-align: center;
+  display: block;
+  padding: 10px 30px;
+  border-color: rgb(241, 116, 116);
+  border-radius: 5px;
+  outline: none;
+}
+
+@keyframes popup {
+  from {
+    bottom: 0;
+    left: 37%;
+  }
+
+  to {
+    bottom: 40%;
+    left: 37%;
+  }
+}
+
+.popout {
+  animation: popout 0.3s ease-out;
+}
+
+@keyframes popout {
+  from {
+    bottom: 40%;
+    left: 37%;
+  }
+
+  to {
+    left: 37%;
+    bottom: 35%;
+  }
+}
+
+.hidden {
+  display: none;
+}
