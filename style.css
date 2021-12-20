@@ -194,6 +194,13 @@ body {
   color: whitesmoke;
 }
 
+#no-item-div {
+  color: white;
+  text-transform: capitalize;
+  font-size: 35px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
 /* Modal Animation */
 .m-box {
   animation-name: popup;

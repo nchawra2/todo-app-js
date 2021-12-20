@@ -14,6 +14,17 @@ let boxes = [];
 // to get unique ids.
 let id = 0;
 
+// CHECK IF NO TASKS LISTS IS PREREST
+function xyz() {
+  if (flexContainer.innerHTML == "") {
+    document.getElementById("no-item-div").classList.remove("hidden");
+  } else {
+    document.getElementById("no-item-div").classList.add("hidden");
+  }
+}
+
+xyz();
+
 // GET THE UPDATED LISTS AFTER USER ADD NEW LIST
 let showBoxes = () => {
   let box = "";
@@ -130,7 +141,10 @@ let addBoxes = () => {
         lists: [],
       });
       console.log(boxes);
-      setTimeout(showBoxes, 350);
+      setTimeout(() => {
+        showBoxes();
+        xyz();
+      }, 350);
     }
     inputValue.value = "";
     setTimeout(() => {
@@ -167,6 +181,7 @@ function delBox(id) {
 
   // AGAIN UPDATE THE UI
   showBoxes();
+  xyz();
 }
 
 // ADD NEW LISTS INSIDE OF PERICULAR BOX/LISTS
