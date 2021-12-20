@@ -91,10 +91,12 @@ body {
   text-align: center;
   font-weight: lighter;
   color: rgb(209, 37, 37);
+  text-transform: capitalize;
 }
 
 .sbox .box-heading {
   padding-top: 10px;
+  text-transform: capitalize;
 }
 
 .tasks {
