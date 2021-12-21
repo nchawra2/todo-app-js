@@ -15,7 +15,7 @@ let boxes = [];
 let id = 0;
 
 // CHECK IF NO TASKS LISTS IS PREREST
-function xyz() {
+function isEmptyOrNot() {
   if (flexContainer.innerHTML == "") {
     document.getElementById("no-item-div").classList.remove("hidden");
   } else {
@@ -23,7 +23,7 @@ function xyz() {
   }
 }
 
-xyz();
+isEmptyOrNot();
 
 // GET THE UPDATED LISTS AFTER USER ADD NEW LIST
 let showBoxes = () => {
@@ -124,50 +124,52 @@ let getSbox = (id) => {
   selected.innerHTML = box;
 };
 
-// GET NEW DETAILS OF LISTS/BOXES FROM USER AND UPDATE THE BOXES ARRAY / LISTS ARRAY
+// show add list modal
 let addBoxes = () => {
   id++;
   modal_box.classList.remove("hidden");
   container.classList.add("blur");
   selected.classList.add("blur");
-
-  list_add_button.addEventListener("click", () => {
-    modal_box.classList.add("popout");
-    let newList = inputValue.value;
-    if (newList) {
-      boxes.push({
-        title: newList,
-        id,
-        lists: [],
-      });
-      console.log(boxes);
-      setTimeout(() => {
-        showBoxes();
-        xyz();
-      }, 350);
-    }
-    inputValue.value = "";
-    setTimeout(() => {
-      modal_box.classList.add("hidden");
-      modal_box.classList.remove("popout");
-      selected.classList.add("d-none");
-      container.classList.remove("d-none");
-      container.classList.remove("blur");
-      selected.classList.remove("blur");
-    }, 300);
-  });
-
-  list_close_button.addEventListener("click", () => {
-    modal_box.classList.add("popout");
-    inputValue.value = "";
-    setTimeout(() => {
-      modal_box.classList.add("hidden");
-      modal_box.classList.remove("popout");
-      container.classList.remove("blur");
-      selected.classList.remove("blur");
-    }, 300);
-  });
 };
+
+
+// GET NEW DETAILS OF LISTS/BOXES FROM USER AND UPDATE THE BOXES ARRAY / LISTS ARRAY
+list_add_button.addEventListener("click", () => {
+  modal_box.classList.add("popout");
+  let newList = inputValue.value;
+  if (newList) {
+    boxes.push({
+      title: newList,
+      id,
+      lists: [],
+    });
+    console.log(boxes);
+    setTimeout(() => {
+      showBoxes();
+      isEmptyOrNot();
+    }, 350);
+  }
+  inputValue.value = "";
+  setTimeout(() => {
+    modal_box.classList.add("hidden");
+    modal_box.classList.remove("popout");
+    selected.classList.add("d-none");
+    container.classList.remove("d-none");
+    container.classList.remove("blur");
+    selected.classList.remove("blur");
+  }, 300);
+});
+
+list_close_button.addEventListener("click", () => {
+  modal_box.classList.add("popout");
+  inputValue.value = "";
+  setTimeout(() => {
+    modal_box.classList.add("hidden");
+    modal_box.classList.remove("popout");
+    container.classList.remove("blur");
+    selected.classList.remove("blur");
+  }, 300);
+});
 
 // DELETE PERTIULAR LIST/BOX
 function delBox(id) {
@@ -181,7 +183,7 @@ function delBox(id) {
 
   // AGAIN UPDATE THE UI
   showBoxes();
-  xyz();
+  isEmptyOrNot();
 }
 
 // ADD NEW LISTS INSIDE OF PERICULAR BOX/LISTS
@@ -244,7 +246,7 @@ function addList(itemId) {
   });
 }
 
-// SHOW THE BOX IN UI
+// SHOW THE SELECTED BOX IN UI
 let getThis = (id) => {
   getSbox(id);
   // MOVE BETWEEN PAGES 1-2
