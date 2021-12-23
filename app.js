@@ -132,7 +132,6 @@ let addBoxes = () => {
   selected.classList.add("blur");
 };
 
-
 // GET NEW DETAILS OF LISTS/BOXES FROM USER AND UPDATE THE BOXES ARRAY / LISTS ARRAY
 list_add_button.addEventListener("click", () => {
   modal_box.classList.add("popout");

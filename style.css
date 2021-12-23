@@ -222,6 +222,8 @@ body {
   text-align: center;
   color: rgb(241, 116, 116);
   z-index: 1000;
+  bottom: 0;
+  left: 37%;
 }
 
 .m-box button {
@@ -310,11 +312,13 @@ body {
   from {
     bottom: 0;
     left: 37%;
+    opacity: 0.1;
   }
 
   to {
     bottom: 40%;
     left: 37%;
+    opacity: 1;
   }
 }
 
@@ -331,6 +335,7 @@ body {
   to {
     left: 37%;
     bottom: 35%;
+    opacity: 0.5;
   }
 }
 
