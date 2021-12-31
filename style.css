@@ -45,7 +45,7 @@ body {
 }
 
 .box {
-  width: 240px;
+  min-width: 240px;
   min-height: 370px;
   box-shadow: 0 0 3px rgb(231, 23, 23);
   position: relative;
@@ -54,7 +54,7 @@ body {
 }
 
 .sbox {
-  width: 240px;
+  min-width: 240px;
   min-height: 370px;
   box-shadow: 0 0 3px rgb(231, 23, 23);
   position: relative;
