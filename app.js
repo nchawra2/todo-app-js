@@ -38,7 +38,7 @@ let showBoxes = () => {
         document.getElementById(`b-${user.id}-${i}`).getAttribute("class") ==
           null
       ) {
-        list += `<p id='b-${user.id}-${i}'>${el} <span class='task-done-btn' onclick="taskDone('b-${user.id}-${i}')">Mark Done</span></p>`;
+        list += `<p id='b-${user.id}-${i}'>${el} <span class='task-done-btn' onclick="taskDone('b-${user.id}-${i}',${user.id})">Mark Done</span></p>`;
       } else if (
         document.getElementById(`b-${user.id}-${i}`) !== null &&
         document
@@ -46,9 +46,9 @@ let showBoxes = () => {
           .getAttribute("class")
           .includes("task-done")
       ) {
-        list += `<p id='b-${user.id}-${i}' class='task-done'>${el} <span class='task-done-btn d-none' onclick="taskDone('b-${user.id}-${i}')">Mark Done</span></p>`;
+        list += `<p id='b-${user.id}-${i}' class='task-done'>${el}</p>`;
       } else {
-        list += `<p id='b-${user.id}-${i}'>${el} <span class='task-done-btn' onclick="taskDone('b-${user.id}-${i}')">Mark Done</span></p>`;
+        list += `<p id='b-${user.id}-${i}'>${el} <span class='task-done-btn' onclick="taskDone('b-${user.id}-${i}',${user.id})">Mark Done</span></p>`;
       }
     });
 
@@ -91,9 +91,9 @@ let getSbox = (id) => {
               .getAttribute("class")
               .includes("task-done")
           ) {
-            list += `<p id='b-${user.id}-${i}' class='task-done'>${el} <span class='task-done-btn d-none' onclick="taskDone('b-${user.id}-${i}')">Mark Done</span></p>`;
+            list += `<p id='b-${user.id}-${i}' class='task-done'>${el}</p>`;
           } else {
-            list += `<p id='b-${user.id}-${i}'>${el} <span class='task-done-btn' onclick="taskDone('b-${user.id}-${i}')">Mark Done</span></p>`;
+            list += `<p id='b-${user.id}-${i}'>${el} <span class='task-done-btn' onclick="taskDone('b-${user.id}-${i}',${user.id})">Mark Done</span></p>`;
           }
         });
 
@@ -106,6 +106,7 @@ let getSbox = (id) => {
           <div class="heading">${user.title}</div>
           <i class="fas fa-plus-circle fa-2x" onclick='addBoxes()'></i>
         </div>
+
         <div class='sbox'>
           <h2 class="box-heading" onclick='getThis(${user.id})'>${user.title}</h2>
           <hr/>
@@ -142,7 +143,7 @@ list_add_button.addEventListener("click", () => {
       id,
       lists: [],
     });
-    console.log(boxes);
+
     setTimeout(() => {
       showBoxes();
       isEmptyOrNot();
