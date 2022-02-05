@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  width: 1100px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -41,7 +41,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 10px;
-  margin-top: 1 0px;
+  margin-top: 1px 0px;
 }
 
 .box {
@@ -80,7 +80,7 @@ body {
 }
 
 .page-2-btn {
-  width: 1100px;
+  max-width: 1100px;
   margin: auto;
   padding: 20px;
   display: flex;

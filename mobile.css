@@ -1,0 +1,119 @@
+@media (max-width: 500px) {
+  body {
+    position: relative;
+    height: 100vh;
+  }
+
+  .container {
+    padding: 0 5px;
+  }
+
+  .task-header h1 {
+    font-size: 30px;
+  }
+
+  .add-box-block i {
+    font-size: 25px;
+  }
+
+  #add-task-text {
+    font-size: 25px;
+  }
+
+  #no-item-div {
+    font-size: 25px;
+  }
+
+  .m-box {
+    height: 160px;
+    width: 240px;
+  }
+
+  .m-box button {
+    margin-top: 10px;
+    height: 30px;
+    width: 65px;
+  }
+
+  .modal-btns {
+    width: 200px;
+  }
+
+  .m-box input {
+    padding: 5px 15px;
+  }
+
+  .add-item-modal {
+    height: 160px;
+    width: 240px;
+  }
+
+  .add-item-modal button {
+    margin-top: 10px;
+    height: 30px;
+    width: 65px;
+  }
+
+  .btn {
+    width: 200px;
+  }
+
+  .add-item-modal input {
+    padding: 5px 15px;
+  }
+
+  .box {
+    width: 240px;
+    min-height: 370px;
+    box-shadow: 0 0 3px rgb(231, 23, 23);
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+  }
+
+  .flex-container {
+    row-gap: 30px;
+    margin-top: 30px;
+  }
+
+  .page-2-btn {
+    padding: 10px;
+    justify-content: space-around;
+  }
+
+  .heading {
+    text-transform: capitalize;
+  }
+
+  #b-btn span {
+    display: none;
+  }
+
+  @keyframes popup {
+    from {
+      bottom: 0;
+      left: 22%;
+      opacity: 0.1;
+    }
+
+    to {
+      bottom: 40%;
+      left: 22%;
+      opacity: 1;
+    }
+  }
+
+  @keyframes popout {
+    from {
+      bottom: 40%;
+      left: 22%;
+    }
+
+    to {
+      left: 22%;
+      bottom: 35%;
+      opacity: 0.1;
+    }
+  }
+}
